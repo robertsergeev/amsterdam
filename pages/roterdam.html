@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <title>Roterdama — Mans Sapņu Ceļojums</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="simple-header">
+    <div class="header-top">
+        <h1>Roterdama</h1>
+        <button class="burger" id="burger">&#9776;</button>
+        <nav class="nav-menu" id="nav-menu">
+            <a href="../index.html">Galvenā</a>
+            <a href="amsterdam.html">Amsterdama</a>
+            <a href="haga.html">Hāga</a>
+            <a href="roterdam.html" style="color: #AE1C28">Roterdama</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="gallery card">
+        <h2>Foto Galerija</h2>
+        <div class="gallery-main">
+            <img id="main-image" src="https://cdn.mos.cms.futurecdn.net/2PFbwkQaNZJMYKcfKuk6WA.jpg" alt="Roterdama">
+        </div>
+        <div class="gallery-thumbnails">
+            <img src="https://cdn.mos.cms.futurecdn.net/2PFbwkQaNZJMYKcfKuk6WA.jpg" alt="Roterdama">
+            <img src="https://www.exoticca.com/_next/image?url=https%3A%2F%2Fuploads.exoticca.com%2Fglobal%2Fdestination%2Fpoi%2Frotterdam.png&w=3840&q=75" alt="Roterdama">
+            <img src="https://s7g10.scene7.com/is/image/stena/20210303_rotterdam-waterscape%3A16-9?ts=1688733736997&dpr=off" alt="Roterdama">
+            <img src="https://www.amsterdam.net/en/wp-content/uploads/sites/136/rotterdam-hd.jpg" alt="Roterdama">
+        </div>
+    </section>
+
+    <section class="cities-slider card">
+        <h2>Plānā iekļautās Apskates objekti</h2>
+        <div class="slider-container">
+            <div class="slider" id="slider">
+
+                <div class="slider-item">
+                    <div class="slider-content">
+                        <div class="slider-image">
+                            <img src="https://www.absolutviajes.com/wp-content/uploads/2015/02/Rotterdam_Cube_Huis_Panorama.jpg" alt="Kubiskās mājas">
+                        </div>
+                        <div class="slider-info">
+                            <h3>Kubiskās mājas</h3>
+                            <p><strong>Futuristiskas dzīvojamās ēkas ar unikālu dizainu.</strong></p>
+                            <p>
+                                Arhitekta Pita Bloma projektētas mājas — slīpi novietoti kubi virs sešstūrveida kolonnām, viens no Roterdamas simboliem.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider-item">
+                    <div class="slider-content">
+                        <div class="slider-image">
+                            <img src="https://cdn.getyourguide.com/img/tour/5e84898ca4f54.jpeg/98.jpg" alt="Markthal tirgus">
+                        </div>
+                        <div class="slider-info">
+                            <h3>Markthal</h3>
+                            <p><strong>Milzīgs pārtikas tirgus un dzīvojamā ēka vienā.</strong></p>
+                            <p>
+                                Iekšā atrodas daudz restorānu un veikaliņu, griesti dekorēti ar milzīgu mākslas darbu “Horn of Plenty”.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider-item">
+                    <div class="slider-content">
+                        <div class="slider-image">
+                            <img src="https://aws-tiqets-cdn.imgix.net/images/content/ce6f5e03741a46029a323d7e8fe86693.jpeg?auto=format%2Ccompress&fit=crop&ixlib=python-3.2.1&q=70" alt="Euromast tornis">
+                        </div>
+                        <div class="slider-info">
+                            <h3>Euromast tornis</h3>
+                            <p><strong>Augstākais skatu tornis Nīderlandē.</strong></p>
+                            <p>
+                                No torņa augšas paveras panorāmas skats uz Roterdamu, iespējama arī nobraukšana ar trosi!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <button class="slider-button prev" id="prev">&#10094;</button>
+            <button class="slider-button next" id="next">&#10095;</button>
+        </div>
+    </section>
+
+    <section class="card">
+        <h3>Pašreizējie laikapstākļi Roterdamā</h3>
+        <div id="weather">
+            <p>Notiek ielāde...</p>
+        </div>
+        <button onclick="fetchWeather()" class="refresh-button">Atjaunot</button>
+    </section>
+
+    <section class="card">
+        <h2>🍽️ Roterdama: Cenas restorānos</h2>
+        <ul>
+            <li><strong>Vienkārša maltīte:</strong> 10–28€</li>
+            <li><strong>Trīs ēdienu maltīte diviem:</strong> 60–120€</li>
+            <li><strong>Ātrās ēdināšanas komplekts (McDonald's):</strong> 10–15€</li>
+            <li><strong>Kafija (cappuccino):</strong> 2.80–4.80€</li>
+        </ul>
+    </section>
+
+
+    <section class="card">
+        <h2>Frāzes noderīgām sarunām</h2>
+        <ul>
+            <li><strong>Hoe laat vertrekt de boot?</strong> – Cikos izbrauc kuģītis?</li>
+            <li><strong>Ik wil een kaartje kopen.</strong> – Es gribu nopirkt biļeti.</li>
+            <li><strong>Tot ziens!</strong> – Uz redzēšanos!</li>
+        </ul>
+    </section>
+
+    <section class="plan card">
+        <h2>Roterdama: Ceļojuma dienas</h2>
+        <table>
+            <thead>
+            <tr><th>Diena</th><th>Apraksts</th></tr>
+            </thead>
+            <tbody>
+            <tr><td>5</td><td>Ierašanās Roterdamā, Kubiskās mājas, tirgus “Markthal”</td></tr>
+            <tr><td>6</td><td>Euromast tornis, pastaiga gar ostu, izbraukums ar kuģīti</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="map card">
+        <h2>Roterdama kartē</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2460.9315110935855!2d4.47917!3d51.9225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c4336d5c4d8f7d%3A0x91a8f4c7ebf2a3ee!2sRotterdam!5e0!3m2!1slv!2slv!4v1715000000002" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; Viktors Vinokurovs</p>
+</footer>
+
+<script src="../js/burger.js"></script>
+<script src="../js/gallery.js"></script>
+<script src="../js/slider.js"></script>
+<script>
+    async function fetchWeather() {
+        const weatherDiv = document.getElementById('weather');
+        weatherDiv.innerHTML = '<p>Notiek ielāde...</p>';
+
+        try {
+            const res = await fetch('https://api.open-meteo.com/v1/forecast?latitude=51.92&longitude=4.48&current_weather=true');
+            const data = await res.json();
+            const temp = data.current_weather.temperature;
+            const wind = data.current_weather.windspeed;
+            const code = data.current_weather.weathercode;
+
+            const descMap = {
+                0: "Saulains",
+                1: "Pārsvarā saulains",
+                2: "Daļēji mākoņains",
+                3: "Apmācies",
+                45: "Migla",
+                51: "Viegls lietus",
+                61: "Mērens lietus",
+                80: "Lietusgāzes"
+            };
+
+            weatherDiv.innerHTML = `
+                <p><strong>Temperatūra:</strong> ${temp} °C</p>
+                <p><strong>Vējš:</strong> ${wind} km/h</p>
+                <p><strong>Laikapstākļi:</strong> ${descMap[code] || "Nezināms"}</p>
+            `;
+        } catch (error) {
+            weatherDiv.innerHTML = '<p>Neizdevās ielādēt laikapstākļus. Lūdzu, mēģini vēlreiz.</p>';
+        }
+    }
+
+    fetchWeather();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <title>Amsterdama — Mans Sapņu Ceļojums</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="simple-header">
+    <div class="header-top">
+        <h1>Amsterdama</h1>
+        <button class="burger" id="burger">&#9776;</button>
+        <nav class="nav-menu" id="nav-menu">
+            <a href="../index.html">Galvenā</a>
+            <a href="amsterdam.html" style="color: #AE1C28">Amsterdama</a>
+            <a href="haga.html">Hāga</a>
+            <a href="roterdam.html">Roterdama</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="gallery card">
+        <h2>Foto Galerija</h2>
+        <div class="gallery-main">
+            <img id="main-image" src="https://upload.wikimedia.org/wikipedia/commons/7/70/Amsterdam_Prinsengracht_Wallpaper.jpg" alt="Amsterdamas kanāls">
+        </div>
+        <div class="gallery-thumbnails">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/70/Amsterdam_Prinsengracht_Wallpaper.jpg" alt="Amsterdamas kanāls">
+            <img src="https://image.kkday.com/v2/image/get/w_1900%2Cc_fit%2Cq_55/s1.kkday.com/product_27516/20190628091500_i86ij/jpg" alt="Van Goga muzejs">
+            <img src="https://www.vlissa.lv/wp-content/uploads/2019/05/Netherlands-1.jpg" alt="Velosipēdi un kanāls">
+            <img src="https://as2.ftcdn.net/v2/jpg/03/79/92/53/1000_F_379925357_jenHAU5G0bNJUVmM2w0fhsYKzzI504Ma.jpg" alt="Ziedu tirgus Bloemenmarkt">
+        </div>
+    </section>
+
+    <section class="cities-slider card">
+        <h2>Plānā iekļautās Apskates objekti</h2>
+
+        <div class="slider-container">
+            <div class="slider" id="slider">
+                <div class="slider-item">
+                    <div class="slider-content">
+                        <div class="slider-image">
+                            <img src="https://cdn.museum.nl/assets/c1da6f0c-7718-4a4e-af2e-d28bc36e8b46?w=3000&c=e1debc3372c1e6d198e1fd7d3603296d039f48f473b9f4a20971174ecefd95cc" alt="Amsterdama">
+                        </div>
+                        <div class="slider-info">
+                            <h3>Rijksmuseums</h3>
+                            <p><strong>Holandiešu mākslas meistardarbi, Rembrants, Vermeers.</strong></p>
+                            <p>
+                                Amsterdama (nīderlandiešu: Amsterdam) ir pilsēta un municipalitāte Nīderlandes centrālajā daļā, pie Amstelas upes ietekas Eiselmērā. Nīderlandes galvaspilsēta un lielākā pilsēta.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider-item">
+                    <div class="slider-content">
+                        <div class="slider-image">
+                            <img src="https://image.kkday.com/v2/image/get/w_1900%2Cc_fit%2Cq_55/s1.kkday.com/product_27516/20190628091500_i86ij/jpg" alt="Hāga">
+                        </div>
+                        <div class="slider-info">
+                            <h3>Van Goga muzejs</h3>
+                            <p><strong>Lielākā Van Goga gleznu kolekcija pasaulē.</strong></p>
+                            <p>
+                                Van Goga muzejs (Van Gogh Museum) ir mākslas muzejs Nīderlandes konstitucionālajā galvaspilsētā Amsterdamā. Atrodas Amsterdamas Muzeju laukumā, kurā bez Van Goga muzeja atrodas arī Rijksmuseum, Amsterdamas Pilsētas muzejs un koncertzāle Concertgebouw.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider-item">
+                    <div class="slider-content">
+                        <div class="slider-image">
+                            <img src="https://kenzly.com/wp-content/uploads/2025/02/Anne-Frank-House.jpg" alt="Roterdama">
+                        </div>
+                        <div class="slider-info">
+                            <h3>Anne Frank nams</h3>
+                            <p><strong>Vēsturiska vieta, kur slēpās Anne Frank un viņas ģimene.</strong></p>
+                            <p>
+                                Annas Frankas māja ir muzejs ar stāstu. Kā apmeklētājs jūs piedzīvojat šo stāstu, izmantojot citātus, fotoattēlus, videoklipus un oriģinālus priekšmetus.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider-item">
+                    <div class="slider-content">
+                        <div class="slider-image">
+                            <img src="https://www.amsterdam.net/en/wp-content/uploads/sites/136/bloemenmarkt-amsterdam-hd.jpg" alt="Roterdama">
+                        </div>
+                        <div class="slider-info">
+                            <h3>Bloemenmarkt</h3>
+                            <p><strong>Vienīgais peldējošais ziedu tirgus pasaulē.</strong></p>
+                            <p>
+                                Bloemenmarkt ir gleznains peldošs ziedu tirgus Singel kanālā, un tā ir ideāla vieta, kur iegādāties suvenīrus, tulpes un visu veidu sīpolus.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="slider-button prev" id="prev">&#10094;</button>
+            <button class="slider-button next" id="next">&#10095;</button>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>Pašreizējie laikapstākļi Amsterdamā</h2>
+        <div id="weather">
+            <p>Notiek ielāde...</p>
+        </div>
+        <button onclick="fetchWeather()" class="refresh-button">Atjaunot</button>
+    </section>
+
+
+    <section class="card">
+        <h2>Amsterdama: Cenas restorānos</h2>
+        <ul>
+            <li><strong>Vienkārša maltīte:</strong> 15–35€</li>
+            <li><strong>Trīs ēdienu maltīte diviem:</strong> 65–120€</li>
+            <li><strong>Ātrās ēdināšanas komplekts (McDonald's):</strong> 11–15€</li>
+            <li><strong>Kafija (cappuccino):</strong> 2–5€</li>
+        </ul>
+    </section>
+
+
+
+    <section class="card">
+        <h2>Frāzes noderīgām sarunām</h2>
+        <ul>
+            <li><strong>Hallo!</strong> – Sveiki!</li>
+            <li><strong>Dank je wel!</strong> – Paldies!</li>
+            <li><strong>Hoeveel kost het?</strong> – Cik tas maksā?</li>
+        </ul>
+    </section>
+
+
+    <section class="plan card">
+        <h2>Amsterdama: Ceļojuma dienas</h2>
+        <table>
+            <thead>
+            <tr><th>Diena</th><th>Apraksts</th></tr>
+            </thead>
+            <tbody>
+            <tr><td>1</td><td>Ierašanās Amsterdamā, pilsētas iepazīšana, kanālu kruīzs</td></tr>
+            <tr><td>2</td><td>Rijksmuseums, Van Goga muzejs, Anne Frank nams</td></tr>
+            <tr><td>7</td><td>Atgriešanās no Roterdamas, brīvais laiks, izbraukšana</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="map card">
+        <h2>Amsterdama kartē</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.4665107941023!2d4.884051376966018!3d52.3675731544258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c609c54c253c67%3A0x768c0e59b3cba0f2!2sAmsterdam!5e0!3m2!1slv!2slv!4v1715000000000" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; Viktors Vinokurovs</p>
+</footer>
+<script src="../js/burger.js"></script>
+<script src="../js/gallery.js"></script>
+<script src="../js/slider.js"></script>
+<script>
+    async function fetchWeather() {
+        const weatherDiv = document.getElementById('weather');
+        weatherDiv.innerHTML = '<p>Notiek ielāde...</p>';
+
+        try {
+            const res = await fetch('https://api.open-meteo.com/v1/forecast?latitude=52.37&longitude=4.89&current_weather=true');
+            const data = await res.json();
+            const temp = data.current_weather.temperature;
+            const wind = data.current_weather.windspeed;
+            const code = data.current_weather.weathercode;
+
+            const descMap = {
+                0: "Saulains",
+                1: "Pārsvarā saulains",
+                2: "Daļēji mākoņains",
+                3: "Apmācies",
+                45: "Migla",
+                51: "Viegls lietus",
+                61: "Mērens lietus",
+                80: "Lietusgāzes"
+            };
+
+            weatherDiv.innerHTML = `
+                <p><strong>Temperatūra:</strong> ${temp} °C</p>
+                <p><strong>Vējš:</strong> ${wind} km/h</p>
+                <p><strong>Laikapstākļi:</strong> ${descMap[code] || "Nezināms"}</p>
+            `;
+        } catch (error) {
+            weatherDiv.innerHTML = '<p>Neizdevās ielādēt laikapstākļus. Lūdzu, mēģini vēlreiz.</p>';
+        }
+    }
+
+    fetchWeather();
+</script>
+
+
+</body>
+</html>

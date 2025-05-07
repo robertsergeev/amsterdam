@@ -1,0 +1,560 @@
+:root {
+    --bg-light: #ffffff;           /* Balts */
+    --bg-card: #E6ECF5;            /* Gaiši zils */
+    --primary: #1E4785;            /* Tumši zils */
+    --accent: #AE1C28;             /* Sarkans */
+    --text-dark: #333333;
+    --text-light: #fff;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --radius: 12px;
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f5f5f5;
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+/* ------------- HEADER ------------------ */
+
+
+
+.simple-header {
+    background: #1E4785;
+    color: var(--text-dark);
+    padding: 2em 1em;
+    text-align: center;
+    box-shadow: 0 2px 8px var(--shadow);
+}
+
+.header-top {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+    align-items: center;
+}
+
+.simple-header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: var(--text-light);
+}
+
+.simple-header nav {
+    display: flex;
+    gap: 1.2em;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.simple-header nav a {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.simple-header nav a:hover {
+    color: var(--accent);
+}
+
+.subtitle {
+    margin-top: 1em;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.burger {
+    display: block;
+    font-size: 1.8em;
+    background: none;
+    border: none;
+    color: var(--text-light);
+    cursor: pointer;
+    position: absolute;
+    top: 1.2em;
+    right: 1em;
+    z-index: 1000;
+}
+
+.simple-header nav {
+    display: none;
+    flex-direction: column;
+    gap: 0.8em;
+    background: #ffffff;
+    border-radius: var(--radius);
+    padding: 1em;
+    box-shadow: 0 4px 12px var(--shadow);
+    margin-top: 1em;
+    position: absolute;
+    right: 1em;
+    top: 4.5em;
+    z-index: 999;
+}
+
+.simple-header nav.show {
+    display: flex;
+}
+
+
+/* ------------- QUOTE ------------------ */
+
+
+/* Добавим стили для цитат */
+.quote-card {
+    /*background: var(--bg-card);*/
+    padding: 2em;
+    margin-bottom: 2em;
+    /*border-radius: var(--radius);
+    box-shadow: 0 4px 12px var(--shadow);*/
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.quote-card h2 {
+    color: var(--primary);
+    font-size: 1.75rem;
+    margin-bottom: 1em;
+    font-weight: bold;
+}
+
+blockquote {
+    font-style: italic;
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin: 0;
+    padding: 1em;
+    position: relative;
+    background-color: #f7f7f7;
+    border-left: 5px solid var(--primary);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    border-radius: 8px;
+    background: var(--bg-light);
+}
+
+blockquote p {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+blockquote::before {
+    content: "“";
+    font-size: 4rem;
+    position: absolute;
+    top: -0.5em;
+    left: -0.6em;
+    color: var(--primary);
+}
+
+blockquote::after {
+    content: "”";
+    font-size: 4rem;
+    position: absolute;
+    bottom: -0.5em;
+    right: -0.5em;
+    color: var(--primary);
+}
+
+.quote-card .quote-button {
+    display: inline-block;
+    margin-top: 1.5em;
+    padding: 0.8em 1.6em;
+    background: var(--accent);
+    color: var(--text-light);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.quote-card .quote-button:hover {
+    background: #88141E;
+}
+
+
+/* ------------- SLIDER ------------------ */
+
+
+.cities-slider {
+    text-align: center;
+    padding: 2em;
+}
+
+.slider-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slider-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+.slider-image {
+    flex: 1;
+    max-width: 100%;  /* Убираем ограничения по ширине */
+}
+
+.slider-image img {
+    width: 100%;
+    height: 400px; /* Увеличиваем высоту картинок */
+    object-fit: cover;
+    border-radius: var(--radius);
+    box-shadow: 0 2px 8px var(--shadow);
+    max-height: 400px; /* Чтобы картинка не выходила за пределы */
+    display: block;  /* Убираем лишние отступы */
+    margin-bottom: 1em;
+}
+
+.slider-info {
+    flex: 1;
+    max-width: 45%;
+    text-align: left;
+}
+
+.slider-info h3 {
+    color: var(--primary);
+    margin-top: 0;
+    font-size: 1.8rem; /* Увеличен размер шрифта для заголовков */
+}
+
+.slider-info p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1em;
+}
+
+.slider-info p strong{
+    font-size: 1.1em;
+}
+
+.slider-info .city-description {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.4;
+    margin-bottom: 1em;
+}
+
+.info-button {
+    display: inline-block;
+    margin-top: 0.8em;
+    padding: 0.6em 1.2em;
+    background: var(--accent);
+    color: var(--text-light);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.info-button:hover {
+    background: #88141E;
+}
+
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0);
+    color: #000;
+    border: none;
+    font-size: 1.5em;
+    width: 50px;
+    height: 50px;
+    padding-bottom: 4px;
+    cursor: pointer;
+    z-index: 1000;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.slider-button:hover {
+    background-color: rgba(0, 0, 0, 0);
+    color: #555555;
+}
+
+.prev {
+    left: -20px;
+}
+
+.next {
+    right: -20px;
+}
+
+
+/* ------------- SLIDER ------------------ */
+
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    flex: 1;
+}
+
+.card {
+    background: var(--bg-card);
+    padding: 1.5em;
+    margin-bottom: 3em;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 12px var(--shadow);
+    transition: var(--transition);
+    border-right: 5px solid var(--primary);
+    border-bottom: 5px solid var(--primary);
+    min-width: 900px;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px var(--shadow);
+}
+
+.cities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.cities .card {
+    flex: 1 1 300px;
+}
+
+.card img {
+    width: 100%;
+    height: 400px; /* Увеличиваем размер картинок */
+    object-fit: cover;
+    border-radius: var(--radius);
+    margin-bottom: 1em;
+    box-shadow: 0 2px 8px var(--shadow);
+}
+
+h2, h3 {
+    color: var(--primary);
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 1.75rem;
+}
+
+ul {
+    padding-left: 1.2em;
+}
+
+ul li {
+    margin-bottom: 0.4em;
+}
+
+.info-button {
+    display: inline-block;
+    margin-top: 0.8em;
+    padding: 0.6em 1.2em;
+    background: var(--accent);
+    color: var(--text-light);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.info-button:hover {
+    background: #88141E;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1em;
+    background: white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+thead {
+    background: var(--primary);
+    color: white;
+}
+
+th, td {
+    padding: 1em;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+
+
+/* --------------- MODAL ---------------------*/
+
+
+
+.modal {
+    display: none; /* Paslēpts pēc noklusējuma */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); /* Melns ar caurspīdīgumu */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 5px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+.btn {
+    border: none;
+    display: inline-block;
+    margin-top: 1.5em;
+    padding: 0.8em 1.6em;
+    background: var(--primary);
+    color: var(--text-light);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+
+
+/* ------------------- GALERIJA -------------------*/
+
+
+
+.gallery-main img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.gallery-thumbnails {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery-thumbnails img {
+    width: 100px;
+    height: 70px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 8px;
+    opacity: 0.7;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.gallery-thumbnails img:hover,
+.gallery-thumbnails img.active {
+    opacity: 1;
+    transform: scale(1.05);
+    border: 2px solid #AE1C28;
+}
+
+
+
+
+
+/* ------------------- MAP -------------------*/
+
+.map iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+    border-radius: var(--radius);
+    box-shadow: 0 2px 10px var(--shadow);
+}
+
+footer {
+    background: #d7d7d7;
+    color: #555;
+    text-align: center;
+    padding: 1em;
+    font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+    .cities {
+        flex-direction: column;
+    }
+}
+
+
+
+
+.refresh-button {
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #AE1C28;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.refresh-button:hover {
+    background-color: #8c1820;
+}

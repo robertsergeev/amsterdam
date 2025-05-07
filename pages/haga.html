@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <title>Hāga — Mans Sapņu Ceļojums</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="simple-header">
+    <div class="header-top">
+        <h1>Hāga</h1>
+        <button class="burger" id="burger">&#9776;</button>
+        <nav class="nav-menu" id="nav-menu">
+            <a href="../index.html">Galvenā</a>
+            <a href="amsterdam.html">Amsterdama</a>
+            <a href="haga.html" style="color: #AE1C28">Hāga</a>
+            <a href="roterdam.html">Roterdama</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="gallery card">
+        <h2>Foto Galerija</h2>
+        <div class="gallery-main">
+            <img id="main-image" src="https://cdn.getyourguide.com/img/location/868055318da8f47a.jpeg/99.jpg" alt="Binnenhof - Hāga">
+        </div>
+        <div class="gallery-thumbnails">
+            <img src="https://cdn.getyourguide.com/img/location/868055318da8f47a.jpeg/99.jpg" alt="Binnenhof - Hāga">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/2015_0422_Plein_The_Hague.jpg" alt="Pilsētas bilde">
+            <img src="https://www.holland.com/upload_mm/7/b/3/85468_fullimage_wandelaars%20op%20het%20plein%20met%20op%20de%20achtergrond%20de%20skyline%20van%20den%20haag%20%C2%A9%20jurjen%20drenth%20via%20the%20hague%20%26%20partners.jpg" alt="Pilsētas bilde">
+            <img src="https://www.holland.com/upload_mm/1/9/2/77012_fullimage_684_1600x924_1150x664_692x316.jpg" alt="Pilsētas bilde">
+        </div>
+    </section>
+
+    <section class="cities-slider card">
+        <h2>Plānā iekļautās Apskates objekti</h2>
+        <div class="slider-container">
+            <div class="slider" id="slider">
+
+                <div class="slider-item">
+                    <div class="slider-content">
+                        <div class="slider-image">
+                            <img src="https://denhaag.com/sites/default/files/styles/keyvisual_1220x640/public/2023-01/Mauritshuis%20Hofvijver.jpg?h=a1e1a043&itok=Hy3NvQ20" alt="Mauritshuis muzejs">
+                        </div>
+                        <div class="slider-info">
+                            <h3>Mauritshuis muzejs</h3>
+                            <p><strong>Slaveni holandiešu mākslas darbi, tostarp Vermeera “Meitene ar pērļu auskaru”.</strong></p>
+                            <p>
+                                Muzejs atrodas vēsturiskā ēkā un glabā pasaulslavenus darbus no Rembranta, Vermeera un citiem holandiešu meistariem.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider-item">
+                    <div class="slider-content">
+                        <div class="slider-image">
+                            <img src="https://culture.ec.europa.eu/sites/default/files/styles/eac_ratio_16_9_xl/public/2020-10/eu-heritage-label-site-peacepalacenl_chansverburgistock.jpg?h=ec93fc4b&itok=uMX-wAYm" alt="Karaliskā pils">
+                        </div>
+                        <div class="slider-info">
+                            <h3>Karaliskā pils</h3>
+                            <p><strong>Oficiālā karaļnama rezidence.</strong></p>
+                            <p>
+                                Noordeindes pils ir viena no trim karaliskajām rezidencēm Nīderlandē, aktīvi izmantota karaļnama pārstāvjiem.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider-item">
+                    <div class="slider-content">
+                        <div class="slider-image">
+                            <img src="https://super.tours/wp-content/uploads/2023/08/the-hague-knights-hall.jpg" alt="Lielā baznīca">
+                        </div>
+                        <div class="slider-info">
+                            <h3>Lielā baznīca (Grote Kerk)</h3>
+                            <p><strong>Gotiska baznīca ar skatu torni.</strong></p>
+                            <p>
+                                Šī vēsturiskā baznīca ir viens no vecākajiem Hāgas simboliem, no torņa paveras lielisks skats uz pilsētu.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <button class="slider-button prev" id="prev">&#10094;</button>
+            <button class="slider-button next" id="next">&#10095;</button>
+        </div>
+    </section>
+
+    <section class="card">
+        <h3>Pašreizējie laikapstākļi Hāgā</h3>
+        <div id="weather">
+            <p>Notiek ielāde...</p>
+        </div>
+        <button onclick="fetchWeather()" class="refresh-button">Atjaunot</button>
+    </section>
+
+    <section class="card">
+        <h2>Hāga: Cenas restorānos</h2>
+        <ul>
+            <li><strong>Vienkārša maltīte:</strong> aptuveni 15.70€</li>
+            <li><strong>Trīs ēdienu maltīte diviem:</strong> aptuveni 73.25€</li>
+            <li><strong>Ātrās ēdināšanas komplekts (McDonald's):</strong> aptuveni 11.51€</li>
+            <li><strong>Kafija (cappuccino):</strong> aptuveni 3.81€</li>
+        </ul>
+    </section>
+
+
+    <section class="card">
+        <h2>Frāzes noderīgām sarunām</h2>
+        <ul>
+            <li><strong>Goedemorgen!</strong> – Labrīt!</li>
+            <li><strong>Waar is het museum?</strong> – Kur atrodas muzejs?</li>
+            <li><strong>Ik spreek geen Nederlands.</strong> – Es nerunāju nīderlandiski.</li>
+        </ul>
+    </section>
+
+    <section class="plan card">
+        <h2>Hāga: Ceļojuma dienas</h2>
+        <table>
+            <thead>
+            <tr><th>Diena</th><th>Apraksts</th></tr>
+            </thead>
+            <tbody>
+            <tr><td>3</td><td>Ierašanās Hāgā, Mauritshuis muzejs, Karaliskā pils</td></tr>
+            <tr><td>4</td><td>Lielā baznīca, ekskursija pa pilsētu, atpūta pie jūras</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+
+
+    <section class="map card">
+        <h2>Hāga kartē</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2461.366452377666!2d4.300699815818975!3d52.07866347973016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5b72ec716de07%3A0xe7482e6b6e45f2db!2sThe%20Hague!5e0!3m2!1slv!2slv!4v1715000000001" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; Viktors Vinokurovs</p>
+</footer>
+
+<script src="../js/burger.js"></script>
+<script src="../js/gallery.js"></script>
+<script src="../js/slider.js"></script>
+<script>
+    async function fetchWeather() {
+        const weatherDiv = document.getElementById('weather');
+        weatherDiv.innerHTML = '<p>Notiek ielāde...</p>';
+
+        try {
+            const res = await fetch('https://api.open-meteo.com/v1/forecast?latitude=52.08&longitude=4.31&current_weather=true');
+            const data = await res.json();
+            const temp = data.current_weather.temperature;
+            const wind = data.current_weather.windspeed;
+            const code = data.current_weather.weathercode;
+
+            const descMap = {
+                0: "Saulains",
+                1: "Pārsvarā saulains",
+                2: "Daļēji mākoņains",
+                3: "Apmācies",
+                45: "Migla",
+                51: "Viegls lietus",
+                61: "Mērens lietus",
+                80: "Lietusgāzes"
+            };
+
+            weatherDiv.innerHTML = `
+                <p><strong>Temperatūra:</strong> ${temp} °C</p>
+                <p><strong>Vējš:</strong> ${wind} km/h</p>
+                <p><strong>Laikapstākļi:</strong> ${descMap[code] || "Nezināms"}</p>
+            `;
+        } catch (error) {
+            weatherDiv.innerHTML = '<p>Neizdevās ielādēt laikapstākļus. Lūdzu, mēģini vēlreiz.</p>';
+        }
+    }
+
+    fetchWeather();
+</script>
+
+</body>
+</html>
